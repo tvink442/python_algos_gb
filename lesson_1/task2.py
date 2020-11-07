@@ -26,23 +26,3 @@ def min_value(min_val, *other):
 lst = [randrange(0, 20) for i in range(10)]
 
 print(min_value(*lst))
-
-
-def min_value2(lst):
-    return sorted(lst)[:1]
-
-print(min_value2(lst))
-
-print(min(lst))
-
-#O(n**2)
-def min_value3(lst):
-    min_val = lst[:1]
-    for i in lst:
-        for j in lst:
-            if i > j:
-                break
-
-
-
-min_value3(lst)
